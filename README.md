@@ -6,6 +6,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+Para que las canciones se muestren  tienes que generar un token, tienes que hacer peticion POST con esta url en postman
+https://accounts.spotify.com/api/token
+Con las siguientes propiedades
+grant_type: client_credentials
+client_id: 42ad9698deb147a49f8919ab5f1270c6
+client_secret: 3938fce9a557444982c4b3cdfa953742
+
+Esto devolvera un objeto con un token, el token lo copias y lo pegas en el servicio spotify.service.ts
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
