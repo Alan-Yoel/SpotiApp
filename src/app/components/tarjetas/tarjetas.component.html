@@ -1,0 +1,16 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 animated fadeIn fast">
+  <div class="col" *ngFor="let item of items; let i = index">
+    <div (click)="verArtista(item)" class="card custom-card puntero">
+      <img [src]="item.images | noimage" class="card-img-top img-fluid" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <div>
+          <ng-container *ngFor="let artista of item.artists; let last = last">
+            <span class="badge rounded-pill bg-success text-light">{{ artista.name }}</span>
+            <span *ngIf="!last" class="mr-1"></span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
